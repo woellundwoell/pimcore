@@ -656,6 +656,7 @@ class Localizedfields extends Data implements CustomResourcePersistingInterface,
     public function setReferencedFields($referencedFields)
     {
         $this->referencedFields = $referencedFields;
+        $this->fieldDefinitionsCache = null;
     }
 
     /**
@@ -672,6 +673,7 @@ class Localizedfields extends Data implements CustomResourcePersistingInterface,
     public function addReferencedField($field)
     {
         $this->referencedFields[] = $field;
+        $this->fieldDefinitionsCache = null;
     }
 
     /**
