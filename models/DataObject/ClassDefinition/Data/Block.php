@@ -814,6 +814,7 @@ class Block extends Data implements CustomResourcePersistingInterface, ResourceP
     public function setReferencedFields($referencedFields)
     {
         $this->referencedFields = $referencedFields;
+        $this->fieldDefinitionsCache = null;
     }
 
     /**
@@ -830,6 +831,7 @@ class Block extends Data implements CustomResourcePersistingInterface, ResourceP
     public function addReferencedField($field)
     {
         $this->referencedFields[] = $field;
+        $this->fieldDefinitionsCache = null;
     }
 
     /**
